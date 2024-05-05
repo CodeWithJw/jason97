@@ -4,7 +4,7 @@ title:      "DevOps中的CI"
 subtitle:   "DevOps，CI"
 date:       2024-05-03
 author:     "Jiawei Bai"
-header-img: "img/bg-material.jpg"
+header-img: "img/in-post/CIinDevops/image-20240502231443039.png"
 catalog:    true
 tags:
     - DevOps
@@ -15,11 +15,11 @@ tags:
 
 ##  软件开发过程&设计工具
 
-<img src="/Users/hanabi/Desktop/博客图片/image-20240502231443039.png" alt="image-20240502231443039" style="zoom:33%;" />
+<img src="img/in-post/CIinDevops/image-20240502231443039.png" alt="image-20240502231443039" style="zoom:33%;" />
 
 ### CI/CD(持续集成和持续部署过程学习)
 
-<img src="/Users/hanabi/Desktop/博客图片/image-20240502220404765.png" alt="image-20240502220404765" style="zoom: 50%;" />
+<img src="/jason97/img/in-post/CIinDevops/image-20240502220404765.png" alt="image-20240502220404765" style="zoom: 50%;" />
 
 ### CODE阶段—>服务器01安装Gitlab（192.168.11.101）
 
@@ -124,7 +124,7 @@ docker-cmopose version
 
 ### INTEGRATE阶段—>服务器02安装Jenkins
 
-<img src="/Users/hanabi/Desktop/博客图片/image-20240502225544686.png" alt="image-20240502225544686" style="zoom: 50%;" />
+<img src="/jason97/img/in-post/CIinDevops/image-20240502225544686.png" alt="image-20240502225544686" style="zoom: 50%;" />
 
 **CI可以理解为：Jenkins将代码拉取、构建、制作镜像交给测试人员测试。**
 **持续集成：将代码持续的集成到主干上，并自动构建和测试**
@@ -172,11 +172,11 @@ mv /usr/local/maven/ ./
 ```
 
 在浏览器中全局设置中设置
-<img src="/Users/hanabi/Desktop/博客图片/image-20240502231938967.png" alt="image-20240502231938967" style="zoom: 50%;" /><img src="/Users/hanabi/Desktop/博客图片/image-20240502232009886.png" alt="image-20240502232009886" style="zoom:50%;" />
+<img src="/jason97/img/in-post/CIinDevops/image-20240502231938967.png" alt="image-20240502231938967" style="zoom: 50%;" /><img src="/Users/hanabi/Desktop/博客图片/image-20240502232009886.png" alt="image-20240502232009886" style="zoom:50%;" />
 
 在浏览器中系统设置中设置，发布地址
 
-<img src="/Users/hanabi/Desktop/博客图片/image-20240502232213345.png" alt="image-20240502232213345" style="zoom:50%;" />
+<img src="/jason97/img/in-post/CIinDevops/image-20240502232213345.png" alt="image-20240502232213345" style="zoom:50%;" />
 
 
 
@@ -186,7 +186,7 @@ mv /usr/local/maven/ ./
 
 #### 通过Freestyle Project设置Jenkins
 
-<img src="/Users/hanabi/Desktop/博客图片/image-20240502234148371.png" alt="image-20240502234148371" style="zoom: 33%;" />
+<img src="/jason97/img/in-post/CIinDevops/image-20240502234148371.png" alt="image-20240502234148371" style="zoom: 33%;" />
 
 
 
@@ -200,39 +200,39 @@ mv /usr/local/maven/ ./
 
 ##### Add build step: Invoke top-level Maven targets
 
-<img src="/Users/hanabi/Desktop/博客图片/image-20240502234509415.png" alt="image-20240502234509415" style="zoom:50%;" />
+<img src="/jason97/img/in-post/CIinDevops/image-20240502234509415.png" alt="image-20240502234509415" style="zoom:50%;" />
 
 ##### Post-build-actions
 
-<img src="/Users/hanabi/Desktop/博客图片/image-20240502234826480.png" alt="image-20240502234826480" style="zoom:50%;" /><img src="/Users/hanabi/Desktop/博客图片/image-20240502234714055.png" alt="image-20240502234714055" style="zoom: 33%;" />
+<img src="/jason97/img/in-post/CIinDevops/image-20240502234826480.png" alt="image-20240502234826480" style="zoom:50%;" /><img src="/jason97/img/in-post/CIinDevops/image-20240502234714055.png" alt="image-20240502234714055" style="zoom: 33%;" />
 
 ##### 构建docker镜像
 
-<img src="/Users/hanabi/Desktop/博客图片/image-20240502235646353.png" alt="image-20240502235646353" style="zoom:50%;" />
+<img src="/jason97/img/in-post/CIinDevops/image-20240502235646353.png" alt="image-20240502235646353" style="zoom:50%;" />
 
 ##### 构建docker yml文件
 
-<img src="/Users/hanabi/Desktop/博客图片/image-20240503000622131.png" alt="image-20240503000622131" style="zoom:50%;" />
+<img src="/jason97/img/in-post/CIinDevops/image-20240503000622131.png" alt="image-20240503000622131" style="zoom:50%;" />
 
 #### jenkins拉取文件汇总
 
-<img src="/Users/hanabi/Desktop/博客图片/image-20240502235929210.png" alt="image-20240502235929210" style="zoom: 67%;" />
+<img src="/jason97/img/in-post/CIinDevops/image-20240502235929210.png" alt="image-20240502235929210" style="zoom: 67%;" />
 
 #### 自动构建后执行
 
-<img src="/Users/hanabi/Desktop/博客图片/图片.jpeg" alt="image-20240503000356685" style="zoom:50%;" />
+<img src="/jason97/img/in-post/CIinDevops/图片.jpeg" alt="image-20240503000356685" style="zoom:50%;" />
 
 #### 查看效果
 
-![image-20240503000701444](/Users/hanabi/Desktop/博客图片/image-20240503000701444.png)
+![image-20240503000701444](/jason97/img/in-post/CIinDevops/image-20240503000701444.png)
 
 ### CD过程
 
 通过Git parameter 根据tag进行拉取
 
-<img src="/Users/hanabi/Desktop/博客图片/image-20240503001605031.png" alt="image-20240503001605031" style="zoom:50%;" />
+<img src="/jason97/img/in-post/CIinDevops/image-20240503001605031.png" alt="image-20240503001605031" style="zoom:50%;" />
 
 根据tag进行检查
 
-<img src="/Users/hanabi/Desktop/博客图片/image-20240503001643591.png" alt="image-20240503001643591" style="zoom:50%;" />
+<img src="/jason97/img/in-post/CIinDevops/mage-20240503001643591.png" alt="image-20240503001643591" style="zoom:50%;" />
 
