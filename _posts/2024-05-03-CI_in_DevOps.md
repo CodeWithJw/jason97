@@ -15,7 +15,7 @@ tags:
 
 ##  软件开发过程&设计工具
 
-<img src="img/in-post/CIinDevops/image-20240502231443039.png" alt="image-20240502231443039" style="zoom:33%;" />
+<img src="" alt="image-20240502231443039"/>
 
 ### CI/CD(持续集成和持续部署过程学习)
 
