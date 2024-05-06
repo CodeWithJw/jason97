@@ -6,7 +6,7 @@ email: dlutbjw@gmail.com
 description: "一个小白的日常记录"
 keyword: "小白"
 url: "https://jasonbai97.com" # your host, for absolute URL
-baseurl: "" # for example, '/blog' if your blog hosted on 'host/blog'
+baseurl: "/site" # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
 future: true
@@ -61,7 +61,7 @@ kramdown:
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.
 sidebar-about-description: "Sidebar就随便写一写吧"
-sidebar-avatar: /img/图像.jpeg # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/touxiang.jpeg # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # Featured Tags
 featured-tags: true # whether or not using Feature-Tags
