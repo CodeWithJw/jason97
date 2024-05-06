@@ -4,7 +4,7 @@ title:      "DevOps中的CI"
 subtitle:   "DevOps，CI"
 date:       2024-05-03
 author:     "Jiawei Bai"
-header-img: "img/in-post/CIinDevops/image-20240502231443039.png"
+header-img: "img/in-post/CICD/devops.png"
 catalog:    true
 tags:
     - DevOps
@@ -15,7 +15,7 @@ tags:
 
 ##  软件开发过程&设计工具
 
-<img src="" alt="image-20240502231443039"/>
+<img src="../img/in-post/CICD/image-20240502220404765.png" alt="image-20240502231443039"/>
 
 ### CI/CD(持续集成和持续部署过程学习)
 
