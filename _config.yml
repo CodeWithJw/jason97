@@ -61,7 +61,7 @@ kramdown:
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.
 sidebar-about-description: "Sidebar就随便写一写吧"
-sidebar-avatar: /img/touxiang.jpeg # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /site/img/touxiang.jpeg # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # Featured Tags
 featured-tags: true # whether or not using Feature-Tags
