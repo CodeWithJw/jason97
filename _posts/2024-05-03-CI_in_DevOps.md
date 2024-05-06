@@ -19,7 +19,7 @@ tags:
 
 ### CI/CD(持续集成和持续部署过程学习)
 
-<img src="/jason97/img/in-post/CIinDevops/image-20240502220404765.png" alt="image-20240502220404765" style="zoom: 50%;" />
+<img src="/jason97/img/in-post/CICD/image-20240502220404765.png" alt="image-20240502220404765" style="zoom: 50%;" />
 
 ### CODE阶段—>服务器01安装Gitlab（192.168.11.101）
 

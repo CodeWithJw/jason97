@@ -6,10 +6,11 @@ layout: default
 <style type="text/css">
     header.intro-header{
         position: relative;
-        background-image: url('{{ page.header-img | default: site.header-img | prepend: site.baseurl }}');
-        /* url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}') */
+        background-image: 
+        /* url('{{ page.header-img | default: site.header-img | prepend: site.baseurl }}'); */
+        url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')
     }
-
+    
     {% if page.header-mask %}
     header.intro-header .header-mask{
         width: 100%;

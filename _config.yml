@@ -60,7 +60,7 @@ kramdown:
 
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.
-sidebar-about-description: "Restart"
+sidebar-about-description: "Yesterday you said tomorrow."
 sidebar-avatar: /img/touxiang.jpeg # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # Featured Tags
