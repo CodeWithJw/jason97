@@ -16,7 +16,7 @@
     <link rel="shortcut icon" href="/site/img/favicon.ico">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="http://localhost:4000/site/2024/05/03/CI_in_DevOps/">
+    <link rel="canonical" href="https://jasonbai97.com/site/2024/05/03/CI_in_DevOps/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/site/css/bootstrap.min.css">
@@ -207,11 +207,11 @@
 
 <h2 id="软件开发过程设计工具">软件开发过程&amp;设计工具</h2>
 
-<p><img src="img/in-post/CICD/image-20240502220404765.png" alt="image-20240502231443039" /></p>
+<p><img src="/site/img/in-post/CICD/devops.png" alt="image-20240502231443039" /></p>
 
 <h3 id="cicd持续集成和持续部署过程学习">CI/CD(持续集成和持续部署过程学习)</h3>
 
-<p><img src="/jason97/img/in-post/CICD/image-20240502220404765.png" alt="image-20240502220404765" style="zoom: 50%;" /></p>
+<p><img src="/site/img/in-post/CICD/image-20240502220404765.png" alt="image-20240502220404765" style="zoom: 50%;" /></p>
 
 <h3 id="code阶段服务器01安装gitlab19216811101">CODE阶段—&gt;服务器01安装Gitlab（192.168.11.101）</h3>
 
@@ -303,7 +303,7 @@ docker-cmopose version
 
 <h3 id="integrate阶段服务器02安装jenkins">INTEGRATE阶段—&gt;服务器02安装Jenkins</h3>
 
-<p><img src="/jason97/img/in-post/CIinDevops/image-20240502225544686.png" alt="image-20240502225544686" style="zoom: 50%;" /></p>
+<p><img src="/site/img/in-post/CICD/image-20240502225544686.png" alt="image-20240502225544686" style="zoom: 50%;" /></p>
 
 <p><strong>CI可以理解为：Jenkins将代码拉取、构建、制作镜像交给测试人员测试。</strong>
 <strong>持续集成：将代码持续的集成到主干上，并自动构建和测试</strong></p>
@@ -348,11 +348,11 @@ docker logs <span class="nt">-f</span> jenkins <span class="c"># 获取密码</s
 </code></pre></div></div>
 
 <p>在浏览器中全局设置中设置
-<img src="/jason97/img/in-post/CIinDevops/image-20240502231938967.png" alt="image-20240502231938967" style="zoom: 50%;" /><img src="/Users/hanabi/Desktop/博客图片/image-20240502232009886.png" alt="image-20240502232009886" style="zoom:50%;" /></p>
+<img src="/site/img/in-post/CICD/image-20240502231938967.png" alt="image-20240502231938967" style="zoom: 50%;" /><img src="/Users/hanabi/Desktop/博客图片/image-20240502232009886.png" alt="image-20240502232009886" style="zoom:50%;" /></p>
 
 <p>在浏览器中系统设置中设置，发布地址</p>
 
-<p><img src="/jason97/img/in-post/CIinDevops/image-20240502232213345.png" alt="image-20240502232213345" style="zoom:50%;" /></p>
+<p><img src="/site/img/in-post/CICD/image-20240502232213345.png" alt="image-20240502232213345" style="zoom:50%;" /></p>
 
 <h3 id="ci过程">CI过程</h3>
 
@@ -360,7 +360,7 @@ docker logs <span class="nt">-f</span> jenkins <span class="c"># 获取密码</s
 
 <h4 id="通过freestyle-project设置jenkins">通过Freestyle Project设置Jenkins</h4>
 
-<p><img src="/jason97/img/in-post/CIinDevops/image-20240502234148371.png" alt="image-20240502234148371" style="zoom: 33%;" /></p>
+<p><img src="/site/img/in-post/CICD/image-20240502234148371.png" alt="image-20240502234148371" style="zoom: 33%;" /></p>
 
 <h4 id="build-now">Build now</h4>
 
@@ -372,41 +372,41 @@ docker logs <span class="nt">-f</span> jenkins <span class="c"># 获取密码</s
 
 <h5 id="add-build-step-invoke-top-level-maven-targets">Add build step: Invoke top-level Maven targets</h5>
 
-<p><img src="/jason97/img/in-post/CIinDevops/image-20240502234509415.png" alt="image-20240502234509415" style="zoom:50%;" /></p>
+<p><img src="/site/img/in-post/CICD/image-20240502234509415.png" alt="image-20240502234509415" style="zoom:50%;" /></p>
 
 <h5 id="post-build-actions">Post-build-actions</h5>
 
-<p><img src="/jason97/img/in-post/CIinDevops/image-20240502234826480.png" alt="image-20240502234826480" style="zoom:50%;" /><img src="/jason97/img/in-post/CIinDevops/image-20240502234714055.png" alt="image-20240502234714055" style="zoom: 33%;" /></p>
+<p><img src="/site/img/in-post/CICD/image-20240502234826480.png" alt="image-20240502234826480" style="zoom:50%;" /><img src="/jason97/img/in-post/CIinDevops/image-20240502234714055.png" alt="image-20240502234714055" style="zoom: 33%;" /></p>
 
 <h5 id="构建docker镜像">构建docker镜像</h5>
 
-<p><img src="/jason97/img/in-post/CIinDevops/image-20240502235646353.png" alt="image-20240502235646353" style="zoom:50%;" /></p>
+<p><img src="/site/img/in-post/CICD/image-20240502235646353.png" alt="image-20240502235646353" style="zoom:50%;" /></p>
 
 <h5 id="构建docker-yml文件">构建docker yml文件</h5>
 
-<p><img src="/jason97/img/in-post/CIinDevops/image-20240503000622131.png" alt="image-20240503000622131" style="zoom:50%;" /></p>
+<p><img src="/site/img/in-post/CICD/image-20240503000622131.png" alt="image-20240503000622131" style="zoom:50%;" /></p>
 
 <h4 id="jenkins拉取文件汇总">jenkins拉取文件汇总</h4>
 
-<p><img src="/jason97/img/in-post/CIinDevops/image-20240502235929210.png" alt="image-20240502235929210" style="zoom: 67%;" /></p>
+<p><img src="/site/img/in-post/CICD/image-20240502235929210.png" alt="image-20240502235929210" style="zoom: 67%;" /></p>
 
 <h4 id="自动构建后执行">自动构建后执行</h4>
 
-<p><img src="/jason97/img/in-post/CIinDevops/图片.jpeg" alt="image-20240503000356685" style="zoom:50%;" /></p>
+<p><img src="/site/img/in-post/CICD/image.jpeg" alt="image-20240503000356685" style="zoom:50%;" /></p>
 
 <h4 id="查看效果">查看效果</h4>
 
-<p><img src="/jason97/img/in-post/CIinDevops/image-20240503000701444.png" alt="image-20240503000701444" /></p>
+<p><img src="/site/img/in-post/CICD/image-20240503000701444.png" alt="image-20240503000701444" /></p>
 
 <h3 id="cd过程">CD过程</h3>
 
 <p>通过Git parameter 根据tag进行拉取</p>
 
-<p><img src="/jason97/img/in-post/CIinDevops/image-20240503001605031.png" alt="image-20240503001605031" style="zoom:50%;" /></p>
+<p><img src="/site/img/in-post/CICD/image-20240503001605031.png" alt="image-20240503001605031" style="zoom:50%;" /></p>
 
 <p>根据tag进行检查</p>
 
-<p><img src="/jason97/img/in-post/CIinDevops/mage-20240503001643591.png" alt="image-20240503001643591" style="zoom:50%;" /></p>
+<p><img src="/site/img/in-post/CICD/image-20240503001643591.png" alt="image-20240503001643591" style="zoom:50%;" /></p>
 
 
 
