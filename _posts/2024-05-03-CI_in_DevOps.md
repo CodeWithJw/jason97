@@ -172,7 +172,7 @@ mv /usr/local/maven/ ./
 ```
 
 在浏览器中全局设置中设置
-<img src="/site/img/in-post/CICD/image-20240502231938967.png" alt="image-20240502231938967" style="zoom: 50%;" /><img src="/Users/hanabi/Desktop/博客图片/image-20240502232009886.png" alt="image-20240502232009886" style="zoom:50%;" />
+<img src="/site/img/in-post/CICD/image-20240502231938967.png" alt="image-20240502231938967" style="zoom: 50%;" /><img src="/site/img/in-post/CICD/image-20240502232009886.png" alt="image-20240502232009886" style="zoom:50%;" />
 
 在浏览器中系统设置中设置，发布地址
 
@@ -204,7 +204,7 @@ mv /usr/local/maven/ ./
 
 ##### Post-build-actions
 
-<img src="/site/img/in-post/CICD/image-20240502234826480.png" alt="image-20240502234826480" style="zoom:50%;" /><img src="/jason97/img/in-post/CIinDevops/image-20240502234714055.png" alt="image-20240502234714055" style="zoom: 33%;" />
+<img src="/site/img/in-post/CICD/image-20240502234826480.png" alt="image-20240502234826480" style="zoom:50%;" /><img src="/site/img/in-post/CICD/image-20240502234714055.png" alt="image-20240502234714055" style="zoom: 33%;" />
 
 ##### 构建docker镜像
 
