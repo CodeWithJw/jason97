@@ -10,13 +10,13 @@
     <meta name="keywords" content="小白">
     <meta name="theme-color" content="#000000">
 
-    <title>DevOps中的CI - jiawei's blog</title>
+    <title>2024年年中总结 - jiawei's blog</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="/site/img/favicon.ico">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://jasonbai97.com/site/2024/05/03/CI_in_DevOps/">
+    <link rel="canonical" href="https://jasonbai97.com/site/2024/06/10/Life/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/site/css/bootstrap.min.css">
@@ -156,8 +156,8 @@
     header.intro-header{
         position: relative;
         background-image: 
-        /* url('/siteimg/in-post/CICD/devops.png'); */
-        url('/site/img/in-post/CICD/devops.png')
+        /* url('/siteimg/in-post/Life/Bycicle.jpg'); */
+        url('/site/img/in-post/Life/Bycicle.jpg')
     }
     
     
@@ -170,19 +170,17 @@
                 <div class="post-heading">
                     <div class="tags">
                         
-                        <a class="tag" href="/site/tags/#DevOps" title="DevOps">DevOps</a>
-                        
-                        <a class="tag" href="/site/tags/#CI/CD" title="CI/CD">CI/CD</a>
+                        <a class="tag" href="/site/tags/#Life" title="Life">Life</a>
                         
                     </div>
-                    <h1>DevOps中的CI</h1>
+                    <h1>2024年年中总结</h1>
                     
                     
-                    <h2 class="subheading">DevOps，CI</h2>
+                    <h2 class="subheading">记录生活</h2>
                     
                     <span id="busuanzi_container_page_pv">Views:&nbsp;<span id="busuanzi_value_page_pv"></span>&nbsp;times</span>
                     
-                    <span class="meta">Posted by Jiawei Bai on May 3, 2024</span>
+                    <span class="meta">Posted by Jiawei Bai on June 10, 2024</span>
                 </div>
             </div>
         </div>
@@ -203,227 +201,60 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-				<h1 id="devops">DevOps</h1>
+				<h1 id="2024年年中总结">2024年年中总结</h1>
 
-<h2 id="软件开发过程设计工具">软件开发过程&amp;设计工具</h2>
+<p>转眼2024年已经过半，日本留学之旅也接近尾声。距离毕业也仅仅只剩下不到3个月，距离提交论文甚至还不到一个月。</p>
 
-<p><img src="/site/img/in-post/CICD/devops.png" alt="image-20240502231443039" /></p>
+<p>今晚突然从床上跳起来，想回顾一下这半年或者说这两年的历程。</p>
 
-<h3 id="cicd持续集成和持续部署过程学习">CI/CD(持续集成和持续部署过程学习)</h3>
+<h4 id="关于学习">关于学习。</h4>
 
-<p><img src="/site/img/in-post/CICD/image-20240502220404765.png" alt="image-20240502220404765" style="zoom: 50%;" /></p>
+<p>从2022年9月来到日本以来，第一个半年，我努力学习所有的课程，虽然我仅仅选了12学分，同时还在这年12月考了个N2的等级证书。</p>
 
-<h3 id="code阶段服务器01安装gitlab19216811101">CODE阶段—&gt;服务器01安装Gitlab（192.168.11.101）</h3>
+<p>第二个半年，春暖花开，这年冬天我没回家，还记得大年三十，研究室里还有很多和我一样留下来的人，一起看着春晚。大年初一的那天我去练了车，然后就在月底顺利的一次通过拿到了驾照。想到这些好像还很遥远，其实仔细想想也就是在去年这个时候而已。</p>
 
-<p>利用docker环境：先安装Docker 和 Docker-Compose</p>
+<p>春天开始选了另外的8学分的课程，组会也正式开始。可惜我们是第一届，我们老板虽然有钱，性格也特别好，但也救不了我们这基础背景各异的10个人。无奈大家只能从头摸索，看论文，做实验，复现别人的论文。只是大家好像永远都确定不了自己的研究方向，我是觉得大家对自己做的东西没有信心。</p>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 服务器01安装Gitlab</span>
-docker version
-docker-compose version
-systemctl stop firewalld <span class="c"># 关闭防火墙</span>
-<span class="nb">mkdir </span>docker <span class="o">&amp;&amp;</span> <span class="nb">cd </span>docker  <span class="c"># /usr/local/docker</span>
-<span class="nb">mkdir </span>gitlab_docker <span class="o">&amp;&amp;</span> <span class="nb">cd </span>gitlab_docker
-<span class="nb">touch </span>docker-compose.yml
-docker search gitlab <span class="c"># 查询gitlab的docker镜像</span>
-docker pull gitlab:latest <span class="c"># 下载</span>
-docker images <span class="c"># 确认下载的gitlab</span>
-nano docker-compose.yml <span class="c"># 编辑 如下</span>
+<p>秋天开学，我还在断断续续的做着兼职，甚至中途还换了一家，但是课程没有了，更多的是组会，研究进度，以及对留学生的就职支援课程。说实话从9月开始恢复上课以来，我感觉每周都非常忙碌，既要参加每周的组会，还要每周两次的就职课，还要每周一到两次的打工。这段时间研究进度稍微有了一些进展，但更多的是准备就职课中各种各样的段子。</p>
 
-systemctl restart docker
-docker-compose logs <span class="nt">-f</span> <span class="c"># 可通过浏览器访问192.168.11.101:8929查看gitlab</span>
-</code></pre></div></div>
+<p>说到日本就职，那就不得不说面试时要讲的各种各样的经历了。从自我介绍，到最努力过的事，到我的优缺点，到对每一个企业的志望动机，再到团队合作，再到失败的经历，这些故事被分成一个一个的部分塞入每一次的就职活动课里。说实话，学到了一些，但从实际就职时的效果来看，学到的不多。</p>
 
-<p>编辑docker-compose.yml文件，设置为docker启动就会让gitlab启动</p>
+<p>直到今年3月再次开学，距离毕业就剩不到半年了。要准备中期答辩，同时还要兼顾面试，以及研究进度。从3月到现在的6月，我面了十几二十多场的面试，准备了中期答辩的资料，不断的修改研究课题。虽然目前还没获得不错的结果，但我希望能在后面的两个月里顺利完成论文和终期答辩，如果能找到个工作那就更好了。</p>
 
-<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">version</span><span class="pi">:</span> <span class="s1">'</span><span class="s">3.1'</span>
-<span class="na">services</span><span class="pi">:</span>
- <span class="na">gitlab</span><span class="pi">:</span>
-  <span class="na">image</span><span class="pi">:</span> <span class="s1">'</span><span class="s">gitlab-image'</span>  <span class="c1"># 镜像名称</span>
-  <span class="na">container-name</span><span class="pi">:</span> <span class="s">gitlab</span> <span class="c1"># 容器名称</span>
-  <span class="na">restart</span><span class="pi">:</span> <span class="s">always</span>    <span class="c1"># 随着docker启动而启动</span>
-  <span class="na">environment</span><span class="pi">:</span>
-   <span class="na">GITLAB_OMNIBUS_CONFIG</span><span class="pi">:</span>
-    <span class="s">external_url 'http://192.168.11.101:8929'</span> <span class="c1"># 当前宿主机ip</span>
-    <span class="s">gitlab_rails['gitlab_shell_ssh_port']=2224</span>
-  <span class="na">ports</span><span class="pi">:</span>
-   <span class="pi">-</span> <span class="s1">'</span><span class="s">8989:8989'</span>
-   <span class="pi">-</span> <span class="s1">'</span><span class="s">2224:2224'</span>
-  <span class="na">volumes</span><span class="pi">:</span>
-   <span class="pi">-</span> <span class="s1">'</span><span class="s">./config:/etc/gitlab'</span>
-   <span class="pi">-</span> <span class="s1">'</span><span class="s">./logs:/var/log/gitlab'</span>
-   <span class="pi">-</span> <span class="s1">'</span><span class="s">./data:/var/opt/gitlab'</span>
-</code></pre></div></div>
+<h4 id="关于生活">关于生活。</h4>
 
-<p>进入docker中的gitlab镜像编辑：</p>
+<p>翻看相册，好像来日本去的第一个地方是京都、大阪、神户和奈良这四个城市。在23年的4月，我开始了和朋友们在日本的第一次旅行，遇到了几个好哥们，一起吃喝一起玩，好像这才让我体会到了人生真正的快乐。虽然每天都走了2万多步，但是每天都可以去看看不同的风景，感受不一样的生活气息，感觉人生的阅历在悄悄增长。</p>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker <span class="nb">exec</span> <span class="nt">-it</span> gitlab bash
-<span class="nb">cat</span> /etc/gitlab/initial_root_password <span class="c">#找到gitlab密码，在浏览器中修改</span>
-<span class="c"># 在gitlab中创建新仓库，用于开发推送</span>
-</code></pre></div></div>
+<p>都说在日留学生都要打工的，回来后也开始了我的打工生涯。平心而论，一开始我确实是想提高日语才去打工的，只不过后来发现，每个月好像还能赚不少，这一打就是打到了暑假。</p>
 
-<h3 id="build阶段服务器02安装mavenjdk19216811102">BUILD阶段—&gt;服务器02安装Maven，JDK（192.168.11.102）</h3>
+<p>中间一个不得不说的故事就是5月黄金周我和研究室的同学们一起租车去了广岛。很难想象虽然我有了日本驾照，在国内也开车六七年了，但是和另一个同学开着一辆阿尔法载着满满一车人去广岛是什么体验。虽然旅途只有短短的三天，但是我非常开心。走过的路我应该是不会忘记的。</p>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Tip 修改虚拟机ip地址 超级模式下：</span>
-nano /etc/sysconfig/network-scripts/ifcfg-ens33
-systemctl restart network
-</code></pre></div></div>
+<p>秋天的时候，除了学习和打工，好像也没干什么事情，去看了几次花火大会，去和朋友们一起骑车，然后年末的时候去了熊本。这些回忆说实话不看着照片，我是想不起来什么细节了，只记得在熊本过了个生日，只觉得开心。快乐的时光总是短暂的。</p>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 安装maven 安装jdk8</span>
-<span class="nb">tar</span> <span class="nt">-zxvf</span> maven <span class="nt">-C</span> /usr/local
-<span class="nb">tar</span> <span class="nt">-zxvf</span> jdk8 <span class="nt">-C</span> /usr/local
-<span class="nb">cd </span>maven <span class="o">&amp;&amp;</span> nano conf/settings.xml <span class="c"># 设置maven 的阿里云镜像</span>
-<span class="c"># maven默认使用jdk1.8版本</span>
-</code></pre></div></div>
+<p>今年1月中旬的时候又去了北海道，终于滑到了顶级的粉雪，泡了在我心里还不如东北大澡堂的日本露天温泉，看了一眼小樽和洞爷湖，在5万日元（大概2500人民币）一只的帝王蟹旁边砸吧了一下嘴，奥，在北海道全程自驾的体验还是非常不错的。</p>
 
-<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">&lt;profile&gt;</span>
- <span class="s">&lt;id&gt;jdk8&lt;/id&gt;</span>
- <span class="s">&lt;activation&gt;</span>
-  <span class="s">&lt;activeByDefault&gt;true&lt;/activeByDefault&gt;</span>
-  <span class="s">&lt;jdk&gt;1.8&lt;/jdk&gt;</span>
- <span class="s">&lt;/activation&gt;</span>
- <span class="s">&lt;properties&gt;</span>
-  <span class="s">&lt;maven.compiler.source&gt;1.8&lt;/maven.compiler.source&gt;</span>
-  <span class="s">&lt;maven.compiler,target&gt;1.8&lt;/maven.compiler.target&gt;</span>
-  <span class="s">&lt;maven.compiler.compilerVersion&gt;1.8&lt;/maven.compiler.compilerVersion&gt;</span>
- <span class="s">&lt;/properties&gt;</span>
-<span class="s">&lt;/profile&gt;</span>
-</code></pre></div></div>
+<p>今年过年的时候，其实本来是不打算回国的。毕竟从1月2月开始很多公司已经开始招聘了。但在某天打工的时候，突然感觉好像回去也没什么的，于是做了一件到现在还令我震惊的事，那就是10点买机票，12点到机场，14点半起飞，16点到大连，晚上9点到家。从此我觉得，日本到国内的距离，也就那么回事吧，哈哈。</p>
 
-<h3 id="operate阶段服务器02安装docker">OPERATE阶段—&gt;服务器02安装Docker</h3>
+<p>说实话回家那段时间看了一个关于减肥的电影，等回来后的3月，黄金的就职月，我把就职撂在一边，开始疯狂跑步，锻炼。当然还有另一个理由就是4月10号要中期答辩，不得不准备我的研究进度报告。4月一拍脑袋发现，奥，不能打工了，得开始找工作了。我翻出了就职课上准备好的简历，开始了找工作。</p>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 安装Docker</span>
-docker <span class="nb">install</span> <span class="c"># 各种方法</span>
-<span class="nb">chmod</span> +x docker-compose <span class="c"># 同时也要安装并赋予可执行</span>
-<span class="nb">echo</span> <span class="nv">$PATH</span> <span class="o">&amp;&amp;</span> <span class="nb">mv </span>docker-compose /usr/bin <span class="c"># 添加环境变量</span>
-systemctl start docker <span class="c"># 启动</span>
-systemctl <span class="nb">enable </span>docker <span class="c"># 开机自启动</span>
-docker version <span class="c"># 确定安装成功</span>
-docker-cmopose version
-</code></pre></div></div>
+<p>5月6月过得很快，转眼写这篇内容的时候已经6月中旬了。</p>
 
-<h3 id="integrate阶段服务器02安装jenkins">INTEGRATE阶段—&gt;服务器02安装Jenkins</h3>
+<h4 id="最后">最后</h4>
 
-<p><img src="/site/img/in-post/CICD/image-20240502225544686.png" alt="image-20240502225544686" style="zoom: 50%;" /></p>
-
-<p><strong>CI可以理解为：Jenkins将代码拉取、构建、制作镜像交给测试人员测试。</strong>
-<strong>持续集成：将代码持续的集成到主干上，并自动构建和测试</strong></p>
-
-<p><strong>CD可以理解为：通过Jenkins将打包好标签的发行版本代码拉取、构建、制作镜像交给运维人员部署。</strong>
-<strong>持续交付：让经过持续集成的代码可以进行手动部署。</strong>
-<strong>持续部署：让可以持续交付的代码随时随地的自动化部署</strong></p>
-
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 安装Jenkins</span>
-docker pull jenkins/jenkins
-<span class="nb">cd</span> /usr/local <span class="o">&amp;&amp;</span> <span class="nb">mkdir </span>docker
-<span class="nb">cd </span>docker <span class="o">&amp;&amp;</span> <span class="nb">mkdir </span>jenkins_docker
-<span class="nb">touch </span>docker-compose.yml <span class="c"># jenkins相关</span>
-docker-compose up <span class="nt">-d</span>
-<span class="nb">chmod</span> <span class="nt">-R</span> 777 data <span class="c"># 给docker权限</span>
-docker-compose restart
-docker logs <span class="nt">-f</span> jenkins <span class="c"># 获取密码</span>
-<span class="c"># 访问jenkins首页 192.168.11.102：8080并设置，下载插件</span>
-<span class="c"># Git parameter &amp; Publish over SSH</span>
-</code></pre></div></div>
-
-<p>编辑docker-compose.yml</p>
-
-<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">version</span><span class="pi">:</span> <span class="s1">'</span><span class="s">3.1'</span>
-<span class="na">services</span><span class="pi">:</span>
- <span class="na">jenkins</span><span class="pi">:</span>
-  <span class="na">image</span><span class="pi">:</span> <span class="s1">'</span><span class="s">jenkins/jenkins:version-number'</span>  <span class="c1"># 镜像名称</span>
-  <span class="na">container-name</span><span class="pi">:</span> <span class="s">jenkins</span> <span class="c1"># 容器名称</span>
-  <span class="na">ports</span><span class="pi">:</span>
-   <span class="pi">-</span> <span class="s1">'</span><span class="s">8080:8080'</span>
-   <span class="pi">-</span> <span class="s1">'</span><span class="s">50000:50000'</span>
-  <span class="na">volumes</span><span class="pi">:</span>
-   <span class="pi">-</span> <span class="s1">'</span><span class="s">./data/:/var/jenkins_home/'</span> <span class="c1"># 前面是宿主机，后面是镜像中项目和插件的位置</span>
-</code></pre></div></div>
-
-<p>将jdk和maven移动到jenkins的data目录下</p>
-
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> /usr/local/docker/jenkins_docker/data
-<span class="nb">mv</span> /usr/local/jdk/ ./
-<span class="nb">mv</span> /usr/local/maven/ ./
-<span class="c"># 在容器中制定jdk和maven，可以在浏览器中全局设置中设置</span>
-</code></pre></div></div>
-
-<p>在浏览器中全局设置中设置
-<img src="/site/img/in-post/CICD/image-20240502231938967.png" alt="image-20240502231938967" style="zoom: 50%;" /><img src="/site/img/in-post/CICD/image-20240502232009886.png" alt="image-20240502232009886" style="zoom:50%;" /></p>
-
-<p>在浏览器中系统设置中设置，发布地址</p>
-
-<p><img src="/site/img/in-post/CICD/image-20240502232213345.png" alt="image-20240502232213345" style="zoom:50%;" /></p>
-
-<h3 id="ci过程">CI过程</h3>
-
-<h4 id="创建git仓库并推送代码">创建git仓库并推送代码</h4>
-
-<h4 id="通过freestyle-project设置jenkins">通过Freestyle Project设置Jenkins</h4>
-
-<p><img src="/site/img/in-post/CICD/image-20240502234148371.png" alt="image-20240502234148371" style="zoom: 33%;" /></p>
-
-<h4 id="build-now">Build now</h4>
-
-<p>拉取到jenkins</p>
-
-<h4 id="configure">Configure</h4>
-
-<h5 id="build">Build</h5>
-
-<h5 id="add-build-step-invoke-top-level-maven-targets">Add build step: Invoke top-level Maven targets</h5>
-
-<p><img src="/site/img/in-post/CICD/image-20240502234509415.png" alt="image-20240502234509415" style="zoom:50%;" /></p>
-
-<h5 id="post-build-actions">Post-build-actions</h5>
-
-<p><img src="/site/img/in-post/CICD/image-20240502234826480.png" alt="image-20240502234826480" style="zoom:50%;" /><img src="/site/img/in-post/CICD/image-20240502234714055.png" alt="image-20240502234714055" style="zoom: 33%;" /></p>
-
-<h5 id="构建docker镜像">构建docker镜像</h5>
-
-<p><img src="/site/img/in-post/CICD/image-20240502235646353.png" alt="image-20240502235646353" style="zoom:50%;" /></p>
-
-<h5 id="构建docker-yml文件">构建docker yml文件</h5>
-
-<p><img src="/site/img/in-post/CICD/image-20240503000622131.png" alt="image-20240503000622131" style="zoom:50%;" /></p>
-
-<h4 id="jenkins拉取文件汇总">jenkins拉取文件汇总</h4>
-
-<p><img src="/site/img/in-post/CICD/image-20240502235929210.png" alt="image-20240502235929210" style="zoom: 67%;" /></p>
-
-<h4 id="自动构建后执行">自动构建后执行</h4>
-
-<p><img src="/site/img/in-post/CICD/image.jpeg" alt="image-20240503000356685" style="zoom:50%;" /></p>
-
-<h4 id="查看效果">查看效果</h4>
-
-<p><img src="/site/img/in-post/CICD/image-20240503000701444.png" alt="image-20240503000701444" /></p>
-
-<h3 id="cd过程">CD过程</h3>
-
-<p>通过Git parameter 根据tag进行拉取</p>
-
-<p><img src="/site/img/in-post/CICD/image-20240503001605031.png" alt="image-20240503001605031" style="zoom:50%;" /></p>
-
-<p>根据tag进行检查</p>
-
-<p><img src="/site/img/in-post/CICD/image-20240503001643591.png" alt="image-20240503001643591" style="zoom:50%;" /></p>
-
-<h3 id="sonarqube">SonarQube</h3>
-
-<h3 id="harbor">Harbor</h3>
+<p>还有很多想说的想记下来的，这里就不赘述了，有时间开另一篇文章再详细记录吧。晚安。</p>
 
 
                 <hr style="visibility: hidden;">
 
                 <ul class="pager">
                     
-                    
-                    <li class="next">
+                    <li class="previous">
                         <a href="/site/2024/05/20/Leetcode/" data-toggle="tooltip" data-placement="top" title="刷题日常">
-                        Next<br>
+                        Previous<br>
                         <span>刷题日常</span>
                         </a>
                     </li>
+                    
                     
                 </ul>
 

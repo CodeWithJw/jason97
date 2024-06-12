@@ -13,7 +13,7 @@ tags:
 
 # DevOps
 
-##  软件开发过程&设计工具
+## 软件开发过程&设计工具
 
 <img src="/site/img/in-post/CICD/devops.png" alt="image-20240502231443039"/>
 
@@ -47,21 +47,21 @@ docker-compose logs -f # 可通过浏览器访问192.168.11.101:8929查看gitlab
 ```yml
 version: '3.1'
 services:
-	gitlab:
-		image: 'gitlab-image'  # 镜像名称
-		container-name: gitlab # 容器名称
-		restart: always				# 随着docker启动而启动
-		environment:
-			GITLAB_OMNIBUS_CONFIG:
-				external_url 'http://192.168.11.101:8929' # 当前宿主机ip
-				gitlab_rails['gitlab_shell_ssh_port']=2224
-		ports:
-			- '8989:8989'
-			- '2224:2224'
-		volumes:
-			- './config:/etc/gitlab'
-			- './logs:/var/log/gitlab'
-			- './data:/var/opt/gitlab'
+ gitlab:
+  image: 'gitlab-image'  # 镜像名称
+  container-name: gitlab # 容器名称
+  restart: always    # 随着docker启动而启动
+  environment:
+   GITLAB_OMNIBUS_CONFIG:
+    external_url 'http://192.168.11.101:8929' # 当前宿主机ip
+    gitlab_rails['gitlab_shell_ssh_port']=2224
+  ports:
+   - '8989:8989'
+   - '2224:2224'
+  volumes:
+   - './config:/etc/gitlab'
+   - './logs:/var/log/gitlab'
+   - './data:/var/opt/gitlab'
 ```
 
 进入docker中的gitlab镜像编辑：
@@ -72,8 +72,6 @@ cat /etc/gitlab/initial_root_password #找到gitlab密码，在浏览器中修�
 # 在gitlab中创建新仓库，用于开发推送
 ```
 
-
-
 ### BUILD阶段—>服务器02安装Maven，JDK（192.168.11.102）
 
 ```shell
@@ -81,8 +79,6 @@ cat /etc/gitlab/initial_root_password #找到gitlab密码，在浏览器中修�
 nano /etc/sysconfig/network-scripts/ifcfg-ens33
 systemctl restart network
 ```
-
-
 
 ```shell
 # 安装maven 安装jdk8
@@ -94,20 +90,18 @@ cd maven && nano conf/settings.xml # 设置maven 的阿里云镜像
 
 ```yml
 <profile>
-	<id>jdk8</id>
-	<activation>
-		<activeByDefault>true</activeByDefault>
-		<jdk>1.8</jdk>
-	</activation>
-	<properties>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler,target>1.8</maven.compiler.target>
-		<maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
-	</properties>
+ <id>jdk8</id>
+ <activation>
+  <activeByDefault>true</activeByDefault>
+  <jdk>1.8</jdk>
+ </activation>
+ <properties>
+  <maven.compiler.source>1.8</maven.compiler.source>
+  <maven.compiler,target>1.8</maven.compiler.target>
+  <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
+ </properties>
 </profile>
 ```
-
-
 
 ### OPERATE阶段—>服务器02安装Docker
 
@@ -152,14 +146,14 @@ docker logs -f jenkins # 获取密码
 ```yml
 version: '3.1'
 services:
-	jenkins:
-		image: 'jenkins/jenkins:version-number'  # 镜像名称
-		container-name: jenkins # 容器名称
-		ports:
-			- '8080:8080'
-			- '50000:50000'
-		volumes:
-			- './data/:/var/jenkins_home/' # 前面是宿主机，后面是镜像中项目和插件的位置
+ jenkins:
+  image: 'jenkins/jenkins:version-number'  # 镜像名称
+  container-name: jenkins # 容器名称
+  ports:
+   - '8080:8080'
+   - '50000:50000'
+  volumes:
+   - './data/:/var/jenkins_home/' # 前面是宿主机，后面是镜像中项目和插件的位置
 ```
 
 将jdk和maven移动到jenkins的data目录下
@@ -178,8 +172,6 @@ mv /usr/local/maven/ ./
 
 <img src="/site/img/in-post/CICD/image-20240502232213345.png" alt="image-20240502232213345" style="zoom:50%;" />
 
-
-
 ### CI过程
 
 #### 创建git仓库并推送代码
@@ -187,8 +179,6 @@ mv /usr/local/maven/ ./
 #### 通过Freestyle Project设置Jenkins
 
 <img src="/site/img/in-post/CICD/image-20240502234148371.png" alt="image-20240502234148371" style="zoom: 33%;" />
-
-
 
 #### Build now
 
